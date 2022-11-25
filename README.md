@@ -1,7 +1,7 @@
-#SISTEMA UNICO DE REGISTRO DE INSPECCIONES 
-<h1 align="center"> SURI Proyect</h1> 
+#SISTEMA UNICO DE REGISTRO DE INSPECCIONES <br>
+<h1 align="center"> SURI PROYECT</h1> 
 
-![SURI”](![LOGO SURI](https://user-images.githubusercontent.com/111392975/203889065-de05e935-e627-4304-b8b8-7c196c02a540.png))
+![LOGO SURI](https://user-images.githubusercontent.com/111392975/203889065-de05e935-e627-4304-b8b8-7c196c02a540.png)
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
 ![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)<br>
