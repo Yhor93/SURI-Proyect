@@ -12,18 +12,20 @@ class UserModel extends ModelConexion {
 	public $usu_password;
 	public $usu_correo;
 	public $usu_telefono;
-	public $usu_direccion;
+	public $usu_tipousuario;
+	public $usu_estado;
 
     // metodo para insersion de reistros
-	public function create( $usuario_data = array() ) {
-		foreach ($usu_data as $key => $value) {
-			//Variables Variables
+	public function create( $user_data = array() ) {
 			
+		foreach ($user_data as $key => $value) {
 			$$key = $value;
 		}
 
-		$this->query = "INSERT INTO usuarios (usu_id, usu_tipodocumento,usu_numerodocumento,usu_nombres,usu_login,usu_password,usu_correo,usu_telefono,usu_direccion) VALUES ($usu_id, '$usu_tipodocumento','$usu_numerodocumento','$usu_nombres','$usu_login','$usu_password','$usu_correo','$usu_telefono','$usu_direccion')";
-		$this->set_query();
+		
+		$this->query = "INSERT INTO usuarios (usu_tipodocumento,usu_numerodocumento,usu_nombres,usu_login,usu_password,usu_correo,usu_telefono,usu_tipousuario,usu_estado) VALUES ('$usu_tipodocumento','$usu_numerodocumento','$usu_nombres','$usu_login','$usu_password','$usu_correo','$usu_telefono','$usu_tipousuario','$usu_estado')"; 
+	
+			$this->set_query();
 	}
 
    //metodo para consultar registro
@@ -34,10 +36,10 @@ class UserModel extends ModelConexion {
 			:"SELECT * FROM usuarios";
 		
 		$this->get_query();
-		//var_dump($this->rows);
+		
 
 		$num_rows = count($this->rows);
-		//echo $num_rows;
+		
 
 		$data = array();
 
@@ -53,15 +55,15 @@ class UserModel extends ModelConexion {
 
 	//metodo para actualizar datos
 
-	public function update( $usuario_data = array() ) {
-		foreach ($status_data as $key => $value) {
+	public function update( $user_data = array() ) {
+
+		foreach ($user_data as $key => $value) {
 			$$key = $value;
 		}
 
-		$this->query = "UPDATE usuarios SET usu_numerodocumento = '$usu_numerodocumento', usu_nombres = '$usu_nombres', usu_login = '$usu_login', usu_correo = '$usu_correo', usu_telefono = '$usu_telefono',
-			usu_direccion = '$usu_direccion'			 
+		$this->query = "UPDATE usuarios SET usu_numerodocumento = '$usu_numerodocumento', usu_nombres = '$usu_nombres', usu_login = '$usu_login', usu_correo = '$usu_correo', usu_telefono = '$usu_telefono',usu_estado = '$usu_estado'			 
 			
-		 WHERE usu_id = $usu_id";
+		 WHERE usu_id = $usu_id"; 
 		$this->set_query();
 	}
 
@@ -73,9 +75,23 @@ class UserModel extends ModelConexion {
 		$this->set_query();
 	}
 
+
+	public function validate_user($login, $pass) {
+		$this->query = "SELECT * FROM usuarios WHERE usu_login = '$login' AND usu_password = '$pass'";
+		$this->get_query();
+
+		$data = array();
+
+		foreach ($this->rows as $key => $value) {
+			array_push($data, $value);
+		}
+
+		return $data;
+	}
+
 	// Destruye la conexion a la DB y libera la memoria
 
 	public function __destruct() {
-		unset($this);
+		//unset($this);
 	}
 }

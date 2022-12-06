@@ -1,0 +1,312 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table {
+  width: max-content;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.box_class {
+  width: 35rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+  border: 1px solid #d95f22;
+}
+
+.header_class {
+  position: relative;
+  width: 35rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f5f5;
+  font-size: .8rem;
+  background-color: #d95f22;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.box_form {
+  width: 60rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+  border: 1px solid #d95f22;
+}
+
+.header_form {
+  position: relative;
+  width: 60rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f5f5;
+  font-size: .8rem;
+  background-color: #d95f22;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: auto;
+}
+
+.circule_class {
+  position: absolute;
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+  background-color: #017b1e;
+  left: 0;
+  margin-left: 1rem;
+}
+
+.circule_class::after {
+  content: '';
+  position: absolute;
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+  background-color: #0f1ab3;
+  left: 1.1rem;
+}
+
+.circule_class::before {
+  content: '';
+  position: absolute;
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+  background-color: #e8f809;
+  left: 2.2rem;
+}
+
+.text_class {
+  width: 25rem;
+  height: 3rem;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: #060606;
+  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+
+.form_class {
+
+  display: inline-block;
+  width: 15rem;
+  height: 60%;
+  margin: 1.3rem;
+  position: relative;
+
+}
+
+.form_class--input {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-size: .8rem;
+}
+
+.form_class--label>label {
+  width: 50%;
+  height: .1rem;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-size: .8rem;
+}
+
+.form_class--input>input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid #525252;
+  font-size: .8rem;
+  border-radius: .2rem;
+}
+
+.form_class--select>select {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid #525252;
+  font-size: .8rem;
+  border-radius: .2rem;
+}
+
+.form_class--button {
+  width: 90%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  font-size: .8rem;
+  border: 1px solid #52525200;
+  border-radius: 10px;
+  margin-top: 2rem;
+  background-color: #02a42e;
+  color: #f5f5f5;
+}
+
+.link_class {
+  width: 100%;
+  height: 2rem;
+  position: relative;
+  color: #cb591c;
+  text-decoration: none;
+  font-size: .8rem;
+  text-align: center;
+  top: -1rem;
+}
+
+/**Caracteristicas para los demas formularios*/
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  /*display: inline-block;*/
+}
+
+.col-label {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.col-input {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+/*Aplicar opciones de CSS para Listar usuario Marisol*/
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+h2 {
+  text-align: center;
+  background-color: #cb591c;
+  color: white;
+}
+
+table {
+  border: 3px solid #cb591c;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table>header {
+  border: 3px solid #cb591c;
+
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+  text-align: left;
+
+}
+
+table tr {
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table tr:nth-child(even) {
+  background: rgb(203, 203, 232);
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: left;
+}
+
+table th {
+  background: #cb591c;
+  color: #fff;
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  width: 50%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  font-size: .8rem;
+  border: 1px solid #52525200;
+  border-radius: 10px;
+  margin-top: 2rem;
+  background-color: #02a42e;
+  color: #f5f5f5;
+}
+
+.body_form {
+  position: absolute;
+
+
+}
